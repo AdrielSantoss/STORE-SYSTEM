@@ -1,0 +1,84 @@
+<div class="row mt-4">
+  <div class="col-auto">
+    <h1>
+      <mat-icon style="font-size: 25px">group</mat-icon>
+      CLIENTES
+    </h1>
+  </div>
+  <div class="col"></div>
+  <div class="col-auto">
+    <button class="btn btn-primary mt-3" (click)="addCliente()">
+      + Cliente
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-3 mb-3">
+    <label><strong>Nome</strong></label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Digite o nome do produto"
+    />
+  </div>
+  <div class="col-3">
+    <label><strong>Tipo</strong></label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Selecione o tipo do produto"
+    />
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Nº</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef>Nome</th>
+        <td mat-cell *matCellDef="let element">{{ element.nome }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="tipo">
+        <th mat-header-cell *matHeaderCellDef>Tipo</th>
+        <td mat-cell *matCellDef="let element">{{ element.tipo }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="preco">
+        <th mat-header-cell *matHeaderCellDef>Preço</th>
+        <td mat-cell *matCellDef="let element">{{ element.preco }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="quantidade">
+        <th mat-header-cell *matHeaderCellDef>Quantidade</th>
+        <td mat-cell *matCellDef="let element">{{ element.quantidade }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="codigoBarras">
+        <th mat-header-cell *matHeaderCellDef>Cód. Barras</th>
+        <td mat-cell *matCellDef="let element">{{ element.codigoBarras }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="acao">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button class="btn btn-warning btn-sm">
+            <mat-icon>edit</mat-icon>
+          </button>
+          &nbsp;
+          <button class="btn btn-danger btn-sm">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

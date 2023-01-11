@@ -1,0 +1,47 @@
+<mat-toolbar class="bg-primary text-white">
+  <ion-icon
+    (click)="drawer.toggle()"
+    name="menu-outline"
+    style="margin-right: 20px; cursor: pointer"
+  ></ion-icon>
+
+  <ion-icon name="storefront" style="margin-right: 10px"></ion-icon>
+  <span class="text-white">Store System</span>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" style="height: 100vh" autosize>
+  <mat-drawer
+    #drawer
+    class="example-sidenav"
+    mode="side"
+    style="min-width: 200px"
+  >
+    <span class="sidebar-item" routerLink="/home">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </span>
+    <span class="sidebar-item" routerLink="/produtos">
+      <mat-icon>shopping_basket</mat-icon>
+      <span>Produtos</span>
+    </span>
+    <span class="sidebar-item" routerLink="/servicos">
+      <mat-icon style="font-size: 22px"> beenhere</mat-icon>
+      <span>Serviços</span>
+    </span>
+    <span class="sidebar-item" routerLink="/clientes">
+      <mat-icon>group</mat-icon>
+      <span>Clientes</span>
+    </span>
+    <span class="sidebar-item" routerLink="/usuarios">
+      <mat-icon>supervised_user_circle</mat-icon>
+      <span>Usuários</span>
+    </span>
+    <span class="sidebar-item">
+      <mat-icon>perm_data_setting</mat-icon>
+      <span>Configurações</span>
+    </span>
+  </mat-drawer>
+  <div style="padding-left: 30px; padding-right: 30px">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

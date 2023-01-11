@@ -1,0 +1,20 @@
+.sidebar-item {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-item:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+.sidebar-item span {
+  font-size: 17px;
+}
+
+mat-drawer mat-icon {
+  font-size: 22px;
+  margin-right: 5px;
+}

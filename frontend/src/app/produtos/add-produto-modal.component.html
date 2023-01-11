@@ -1,0 +1,83 @@
+<div class="modal-header bg-primary text-white"><h1>Novo produto</h1></div>
+<div class="modal-body">
+  <form>
+    <div class="form-row">
+      <div class="col-12">
+        <div class="form-group">
+          <label><strong>Nome</strong></label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            placeholder="Digite o nome do produto"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="form-row mt-3">
+      <div class="col-12">
+        <div class="form-group">
+          <label><strong>Tipo</strong></label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            placeholder="Digite o nome do produto"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="form-row mt-3">
+      <div class="col-12">
+        <div class="form-group">
+          <label><strong>Imagem</strong></label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            placeholder="Insira a URL da imagem"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="form-row mt-3">
+      <div class="col-12">
+        <div class="form-group">
+          <label><strong>Quantidade</strong></label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            placeholder="Digite a quantidade"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="form-row mt-3">
+      <div class="col-12">
+        <div class="form-group">
+          <label><strong>Preço</strong></label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            placeholder="Digite o preço"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="form-row mt-3">
+      <div class="col-12">
+        <div class="form-group">
+          <label><strong>Código de barras</strong></label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            placeholder="Digite o código de barras"
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-secondary mr-2" (click)="modal.close()">
+    Cancelar
+  </button>
+  <button class="btn btn-primary">Adicionar</button>
+</div>
